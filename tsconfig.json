@@ -1,0 +1,28 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": [
+      "decorators",
+      "dom",
+      "ES2015",
+      "ES2015.Iterable",
+      "ES2015.Promise",
+      "scripthost"
+    ],
+    "paths": {
+      "waterfall": ["./js/waterfall"],
+      "d3": ["../js/index.bundle"]
+    },
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "ES2015",
+    "moduleResolution": "Node",
+    "outDir": "./wwwroot/js"
+  },
+  "include": [
+    "./ts/*"
+  ]
+}

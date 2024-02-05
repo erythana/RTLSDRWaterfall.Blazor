@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "tsc-alias": "^1.8.8",
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@types/d3": "^7.4.3",
+    "d3": "^7.8.5"
+  },
+  "scripts": {
+    "test": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "webpack":"webpack ./npm/src/index.js ./wwwroot/js/waterfall.js --output-path ./wwwroot/js --output-filename index.bundle.js",
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json && webpack ./npm/src/index.js ./wwwroot/js/waterfall.js --output-path ./wwwroot/js --output-filename index.bundle.js"
+  }
+}

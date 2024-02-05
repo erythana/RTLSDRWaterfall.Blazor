@@ -1,0 +1,242 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <TypeScriptEnableIncrementalMSBuild>false</TypeScriptEnableIncrementalMSBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.1"/>
+        <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="5.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\RFResult.js"/>
+        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\RFResult.js.map"/>
+        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\waterfall.js"/>
+        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\waterfall.js.map"/>
+        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\WaterfallData.js"/>
+        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\WaterfallData.js.map"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\RFResult.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\waterfall.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\WaterfallData.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\dns\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\fs\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\assert.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\assert\strict.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\async_hooks.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\buffer.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\child_process.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\cluster.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\console.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\constants.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\crypto.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\dgram.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\diagnostics_channel.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\dns.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\dns\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\dom-events.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\domain.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\events.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\fs.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\fs\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\globals.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\globals.global.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\http.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\http2.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\https.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\inspector.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\module.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\net.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\os.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\path.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\perf_hooks.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\process.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\punycode.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\querystring.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\readline.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\readline\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\repl.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\stream.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\stream\consumers.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\stream\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\stream\web.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\string_decoder.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\test.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\timers.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\timers\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\tls.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\trace_events.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\tty.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\url.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\util.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\v8.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\vm.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\wasi.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\worker_threads.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\ts4.8\zlib.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\commander\typings\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\iconv-lite\lib\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\robust-predicates\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\agent.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\api.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\balanced-pool.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\cache.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\client.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\connector.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\content-type.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\cookies.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\diagnostics-channel.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\dispatcher.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\errors.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\fetch.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\file.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\filereader.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\formdata.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\global-dispatcher.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\global-origin.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\handlers.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\header.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\interceptors.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\mock-agent.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\mock-client.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\mock-errors.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\mock-interceptor.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\mock-pool.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\patch.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\pool-stats.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\pool.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\proxy-agent.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\readable.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\webidl.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\js\undici-types\websocket.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\assert.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\assert\strict.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\async_hooks.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\buffer.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\child_process.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\cluster.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\console.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\constants.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\crypto.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\dgram.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\diagnostics_channel.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\dns.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\dom-events.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\domain.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\events.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\fs.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\globals.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\globals.global.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\http.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\http2.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\https.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\inspector.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\module.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\net.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\os.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\path.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\perf_hooks.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\process.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\punycode.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\querystring.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\readline.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\readline\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\repl.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\stream.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\stream\consumers.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\stream\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\stream\web.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\string_decoder.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\test.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\timers.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\timers\promises.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\tls.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\trace_events.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\tty.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\url.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\util.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\v8.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\vm.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\wasi.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\worker_threads.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\node\zlib.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-polygon\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-chord\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-scale-chromatic\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-force\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-ease\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-dispatch\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-interpolate\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-random\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-time\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-quadtree\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-geo\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-transition\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-axis\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-drag\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-brush\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-selection\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-fetch\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-zoom\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-timer\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-time-format\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-shape\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\geojson\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-scale\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-hierarchy\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-format\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-array\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-dsv\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-contour\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-color\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-path\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\d3-delaunay\index.d.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\RFResult.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\waterfall.ts"/>
+        <TypeScriptCompile Remove="wwwroot\D3Waterfall\ts\WaterfallData.ts"/>
+        <TypeScriptCompile Remove="wwwroot\waterfall.ts"/>
+        <TypeScriptCompile Remove="wwwroot\WaterfallData.ts"/>
+        <TypeScriptCompile Remove="wwwroot\RFResult.ts"/>
+        <TypeScriptCompile Remove="wwwroot\ts\RFResult.ts"/>
+        <TypeScriptCompile Remove="wwwroot\ts\waterfall.ts"/>
+        <TypeScriptCompile Remove="wwwroot\ts\WaterfallData.ts"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="wwwroot\js\"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Compile Update="Waterfall.razor.js">
+        <DependentUpon>Waterfall.razor</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+<!--    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">-->
+<!--        <Exec Command="npm install" WorkingDirectory="npm"/>-->
+<!--        <Exec Command="npm run build" WorkingDirectory="npm"/>-->
+<!--    </Target>-->
+
+<!--    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">-->
+<!--        <Exec Command="npm install" WorkingDirectory="npm"/>-->
+<!--        <Exec Command="npm run build" WorkingDirectory="npm"/>-->
+<!--    </Target>-->
+
+</Project>

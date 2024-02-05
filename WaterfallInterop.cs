@@ -8,7 +8,7 @@ public class WaterfallInterop : IAsyncDisposable
 
     public WaterfallInterop(IJSRuntime js)
     {
-        const string jsBundle = "./_content/RTLSDRWaterfall.Blazor/js/index.bundle.js";
+        const string jsBundle = "./_content/RTLSDRWaterfall.Blazor/js/waterfall.js";
         jsModule = new Lazy<Task<IJSObjectReference>>(() => js.InvokeAsync<IJSObjectReference>(
             "import", jsBundle).AsTask());
     }

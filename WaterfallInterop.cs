@@ -2,29 +2,17 @@ namespace RTLSDRWaterfall.Blazor;
 
 using Microsoft.JSInterop;
 
-public class WaterfallInterop : IAsyncDisposable
+public class WaterfallInterop
 {
-    private readonly Lazy<Task<IJSObjectReference>> jsModule;
+    private readonly IJSRuntime _js;
 
     public WaterfallInterop(IJSRuntime js)
     {
-        const string jsBundle = "./_content/RTLSDRWaterfall.Blazor/js/waterfall.js";
-        jsModule = new Lazy<Task<IJSObjectReference>>(() => js.InvokeAsync<IJSObjectReference>(
-            "import", jsBundle).AsTask());
+        _js = js;
     }
 
     public async Task DisplayRTLPowerData(string message)
     {
-        var module = await jsModule.Value;
-        var test = await module.InvokeAsync<object>("Waterfall.createWaterfall", "waterfall", "","", true, true, true);
-    }
-
-    public async ValueTask DisposeAsync()
-    {
-        if (jsModule.IsValueCreated)
-        {
-            var module = await jsModule.Value;
-            await module.DisposeAsync();
-        }
+        var test = await _js.InvokeAsync<IJSObjectReference>("window.createWaterfall", "waterfall", "","", true, true, true);
     }
 }

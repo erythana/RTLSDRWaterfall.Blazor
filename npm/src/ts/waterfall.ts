@@ -12,6 +12,10 @@ import {
     AxisDomain, json, text
 } from "d3";
 
+export function createWaterfall(id: string, dataURL: string, annotationURL: string, isAnimatable: boolean, isSelectable: boolean, isZoomable: boolean){
+    return new Waterfall(id, dataURL, annotationURL, isAnimatable, isSelectable, isZoomable);
+}
+
 export class Waterfall {
     private data: WaterfallData;
     private dataURL: string;
@@ -193,13 +197,12 @@ export class Waterfall {
 // cb: Function to call when completed. Generally should be set to initDisplay.
     getData(rtlPowerCSV: string, cb: (param: Waterfall) => void) {
 
-        let dataRequest = text(rtlPowerCSV)
-            .then(response => this.parseCSVData(response));
+        this.parseCSVData(rtlPowerCSV);
         let annotationRequest = this.annotationURL
             ? json<string>(this.annotationURL).then(response => this.parseJSONData(response))
             : Promise.resolve(null);
 
-        Promise.all([dataRequest, annotationRequest])
+        Promise.all([annotationRequest])
             .then(() => {
                 if (cb) cb(this);
             })
@@ -210,8 +213,9 @@ export class Waterfall {
 
 // Parses the raw CSV data from rtl_power
     parseCSVData(response: string): void{
+        console.log("jo");
         let parser = d3.timeParse("%Y-%m-%d %H:%M:%S");
-
+        console.log(parser);
         let freqStep = 0,
             freqRange = [Number.MAX_VALUE, Number.MIN_VALUE],
             timeRange = [Number.MAX_VALUE, Number.MIN_VALUE],

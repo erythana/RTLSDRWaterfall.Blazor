@@ -15,27 +15,24 @@
     </ItemGroup>
 
     <ItemGroup>
-        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\RFResult.js"/>
-        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\RFResult.js.map"/>
-        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\waterfall.js"/>
-        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\waterfall.js.map"/>
-        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\WaterfallData.js"/>
-        <_ContentIncludedByDefault Remove="wwwroot\wwwroot\D3Waterfall\js\WaterfallData.js.map"/>
-    </ItemGroup>
-
-    <ItemGroup>
-        <Folder Include="wwwroot\js\"/>
-    </ItemGroup>
-
-    <ItemGroup>
         <Compile Update="Waterfall.razor.js">
             <DependentUpon>Waterfall.razor</DependentUpon>
         </Compile>
     </ItemGroup>
 
-    <Target Name="AfterBuild" AfterTargets="Compile">
-        <Exec Command="npm install" WorkingDirectory="npm"/>
-        <Exec Command="npm run build" WorkingDirectory="npm"/>
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="wwwroot\index.bundle.js">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+        <Exec Command="npm install" WorkingDirectory="npm" />
+        <Exec Command="npm run build" WorkingDirectory="npm" />
     </Target>
 
 </Project>

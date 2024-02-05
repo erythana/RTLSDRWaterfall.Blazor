@@ -16,7 +16,7 @@ public class WaterfallInterop : IAsyncDisposable
     public async Task DisplayRTLPowerData(string message)
     {
         var module = await jsModule.Value;
-        await module.InvokeVoidAsync("let test = new Waterfall('waterfall'', '', '', true, true, true)");
+        var test = await module.InvokeAsync<object>("Waterfall.createWaterfall", "waterfall", "","", true, true, true);
     }
 
     public async ValueTask DisposeAsync()

@@ -20,9 +20,9 @@
     "sourceMap": true,
     "target": "ES2015",
     "moduleResolution": "Node",
-    "outDir": "./wwwroot/js"
+    "outDir": "./Waterfall/src"
   },
   "include": [
-    "./ts/*"
+    "./Waterfall/ts/*",
   ]
 }
